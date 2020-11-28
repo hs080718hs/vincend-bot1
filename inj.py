@@ -4,6 +4,7 @@
 #pip install captcha
 
 import discord
+import os
 from captcha.image import ImageCaptcha
 import random
 import time
@@ -61,7 +62,8 @@ async def on_message(message):
             tlfvoEmbed.add_field(name='이유', value='잘못된 숫자', inline=False)
             await message.channel.send(embed=tlfvoEmbed)
             print(f'{message.author} 님이 잘못된 숫자로 인해 인증을 실패함.')
-
-client.run('NzgxODcwMTE3NDQwMTkyNTQz.X8D7Sg.54iHuD6e_8KBfqiibmek7LhaKMs')
+            
+access_token = os.enviiron["BOT_TOKEN"]
+client.run(access_token)
 
 
