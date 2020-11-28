@@ -63,7 +63,7 @@ async def on_message(message):
             await message.channel.send(embed=tlfvoEmbed)
             print(f'{message.author} 님이 잘못된 숫자로 인해 인증을 실패함.')
             
-access_token = os.enviiron["BOT_TOKEN"]
+access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
 
 
